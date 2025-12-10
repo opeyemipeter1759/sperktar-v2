@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {/* Main Content Container */}
           <div className="flex flex-col w-full max-w-6xl flex-grow">
             {/* Header */}
-            <header className="flex w-full items-center justify-between whitespace-nowrap px-4 py-5 sm:px-6">
+           <header className="flex w-full items-center justify-between whitespace-nowrap px-4 py-5 sm:px-6">
               <div className="flex items-center gap-4 text-white">
                 <Link href="/" className="flex items-center gap-4">
                   <div className="text-primary size-7">
@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </nav>
               <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
                 <span className="truncate">Get a Quote</span>
-              </button>
+              </button> 
             </header>
             <main className="flex-grow">{children}</main>
             <Footer />

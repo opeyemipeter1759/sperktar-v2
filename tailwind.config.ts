@@ -13,12 +13,12 @@ const config: Config = {
       colors: {
         "primary": "#36e27b",
         "background-light": "#f6f8f7",
-        "background-dark": "#111714",
+        "background-dark": "#112117",
       },
       fontFamily: {
         "display": ["Spline Sans", "sans-serif"]
       },
-      borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px"},
+      borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
     },
   },
   plugins: [],
