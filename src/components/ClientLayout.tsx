@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Footer from './Footer';
 import ContactButton from './ContactButton';
@@ -9,14 +9,31 @@ import ContactForm from './ContactForm';
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const [isContactFormVisible, setIsContactFormVisible] = useState(false);
+  const [showContactButton, setShowContactButton] = useState(false);
 
   const toggleContactForm = () => {
     setIsContactFormVisible(!isContactFormVisible);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowContactButton(true);
+      } else {
+        setShowContactButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <ContactButton onClick={toggleContactForm} />
+      <ContactButton onClick={toggleContactForm} isVisible={showContactButton} />
       <ContactForm isVisible={isContactFormVisible} onClose={toggleContactForm} />
       <div className="relative flex min-h-screen w-full flex-col items-center overflow-x-hidden p-4 sm:p-6 md:p-8">
         <div className="absolute inset-0 -z-10 h-full w-full bg-background-dark">
@@ -41,11 +58,11 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             </div>
             <nav className="hidden items-center gap-9 md:flex">
               <Link className="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="/services">Services</Link>
-              <a className="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Work</a>
+              <a className="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="/work">Work</a>
               <a className="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">About</a>
-              <a className="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Contact</a>
+              <a className="text-gray-300 hover:text-white text-sm font-medium leading-normal transition-colors" href="#" onClick={toggleContactForm}>Contact</a>
             </nav>
-            <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+            <button onClick={toggleContactForm} className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
               <span className="truncate">Get a Quote</span>
             </button>
           </header>

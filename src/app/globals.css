@@ -1,56 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.glass-panel {
-    background-color: rgba(255, 255, 255, 0.05);
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.nav-glass {
-     background-color: rgba(17, 33, 23, 0.5);
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+@layer base {
+  body {
+    @apply bg-background-dark text-white;
+  }
 }
 
-.glassmorphic-card {
-    background-color: rgba(30, 41, 35, 0.4); /* background-dark/40 with a bit of a green tint */
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(61, 82, 69, 0.5); /* border-primary/20 */
-    transition: all 0.3s ease-in-out;
-}
-.glassmorphic-card:hover {
-    border-color: rgba(54, 226, 123, 0.7); /* primary/70 */
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 8px 32px 0 rgba(54, 226, 123, 0.1);
-}
-.icon-background {
-    background: linear-gradient(145deg, rgba(54, 226, 123, 0.15), rgba(54, 226, 123, 0.05));
-}
+@layer components {
+    .glass-panel {
+        @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-lg;
+    }
 
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 300,
-    'GRAD' 0,
-    'opsz' 24;
-}
+    .glass-panel-form {
+        @apply bg-black/30 backdrop-blur-2xl border-l border-white/10 shadow-2xl;
+    }
 
-.logo-glass {
-    background-color: rgba(255, 255, 255, 0.02);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
-}
-.logo-glass:hover {
-     background-color: rgba(255, 255, 255, 0.06);
-     border-color: rgba(255, 255, 255, 0.15);
-     transform: translateY(-2px);
-     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    .glassmorphic-card {
+        @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+    }
+
+    .icon-background, .icon-container {
+        @apply bg-white/10;
+    }
 }

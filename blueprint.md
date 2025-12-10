@@ -3,28 +3,32 @@
 
 ## Overview
 
-This project is a Next.js application using the App Router. It is styled with Tailwind CSS and includes a services page.
+A modern, scalable, and data-driven Next.js application. This project is built with a focus on best practices, including a modular architecture, reusable components, and a data-driven approach to content management.
 
 ## Style and Design
 
-- **CSS Framework:** Tailwind CSS
-- **Colors:**
-    - `primary`: "#36e27b"
-    - `background-light`: "#f6f8f7"
-    - `background-dark`: "#111714"
-- **Font:** "Spline Sans"
-- **Icons:** Material Symbols
+The application features a modern and visually appealing design with a consistent theme. Key design elements include:
+
+*   **Glassmorphism:** Used to create a sense of depth and transparency.
+*   **Modern Components:** Sleek, reusable components for a consistent user experience.
+*   **Visually Balanced Layout:** Clean spacing and a well-organized structure.
+*   **Polished Styles:** Easy-to-understand styles that enhance readability.
 
 ## Features
 
-### Services Page
-
-- A page displaying the services offered.
-- Located at `/services`.
-- Includes a header, a main content area with a bento grid of services, and a footer.
+*   **Homepage:** A welcoming page with a brief introduction and a showcase of recent work.
+*   **Services Page:** A detailed overview of the services offered, including a bento grid, a "Why Choose Us" section, and a step-by-step breakdown of the build process.
+*   **Recent Work Section:** A grid of projects with images, titles, descriptions, and links to case studies.
+*   **Work Page:** A dedicated page to showcase all of the projects.
+*   **Contact Page:** A page with a contact form that includes backend validation.
+*   **Data-Driven Content:** All content is managed in separate data files, making it easy to update and maintain.
+*   **Reusable Components:** The application is built with a library of reusable components, ensuring a consistent design and a more efficient development process.
 
 ## Current Plan
 
-- Implement the services page based on the provided HTML.
-- Add a navigation bar to the main layout.
-- Update the styling and configuration to match the provided design.
+**Implement a contact form with backend validation.**
+
+*   **Install `zod`** for validation.
+*   **Create a Server Action** to handle the form submission.
+*   **Create a `ContactForm` component** as a Client Component.
+*   **Create a `contact` page** to display the form.
