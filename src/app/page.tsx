@@ -80,6 +80,72 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <div className="w-full max-w-6xl mx-auto pt-8">
+<div className="glass-panel rounded-2xl p-8 md:p-12 lg:p-20 relative overflow-hidden group">
+<div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-blue-500/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+<div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gradient-to-t from-primary/5 to-transparent rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
+<div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 relative z-10">
+<div className="lg:col-span-5 flex flex-col justify-between h-full">
+<div className="space-y-6">
+<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 w-fit backdrop-blur-sm">
+<span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span className="text-xs font-semibold tracking-widest text-white/80 uppercase">Core Capabilities</span>
+</div>
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-white leading-tight tracking-tight">
+                      Future-Proofing Your Vision: <br className="hidden lg:block"/>
+<span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">Engineered for Tomorrow.</span>
+</h2>
+</div>
+<div className="hidden lg:flex mt-12 opacity-60">
+<svg className="text-white/20" fill="none" height="120" viewBox="0 0 100 100" width="120" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" r="48" stroke="currentColor" strokeDasharray="4 4" strokeWidth="1"></circle>
+<circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1"></circle>
+<path d="M50 20 L50 50 L75 65" stroke="currentColor" strokeWidth="1"></path>
+<circle cx="50" cy="50" fill="white" fillOpacity="0.8" r="4"></circle>
+</svg>
+</div>
+</div>
+<div className="lg:col-span-7 flex flex-col gap-8">
+<div className="space-y-6 text-lg text-white/70 font-light leading-relaxed">
+<p>
+                      At our core, we transcend traditional development to architect bespoke digital products. Leveraging expertise in <span className="text-white font-medium">Data &amp; AI</span>, advanced <span className="text-white font-medium">Mobile/Web Applications</span>, robust <span className="text-white font-medium">Cloud infrastructures</span>, and insightful <span className="text-white font-medium">Research &amp; Design</span>, we craft not just solutions, but strategic assets. Our commitment is to empower founders with scalable technology that drives immediate impact and secures enduring market leadership.
+                  </p>
+</div>
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+<div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
+<span className="material-symbols-outlined text-primary text-2xl">dataset</span>
+<div className="flex flex-col">
+<span className="text-white/90 text-sm font-bold">Data &amp; AI</span>
+<span className="text-white/40 text-xs">Intelligent automation</span>
+</div>
+</div>
+<div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
+<span className="material-symbols-outlined text-blue-400 text-2xl">devices</span>
+<div className="flex flex-col">
+<span className="text-white/90 text-sm font-bold">Mobile/Web Apps</span>
+<span className="text-white/40 text-xs">Cross-platform solutions</span>
+</div>
+</div>
+<div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
+<span className="material-symbols-outlined text-purple-400 text-2xl">cloud</span>
+<div className="flex flex-col">
+<span className="text-white/90 text-sm font-bold">Cloud Infrastructure</span>
+<span className="text-white/40 text-xs">Scalable architecture</span>
+</div>
+</div>
+<div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
+<span className="material-symbols-outlined text-pink-400 text-2xl">palette</span>
+<div className="flex flex-col">
+<span className="text-white/90 text-sm font-bold">Research &amp; Design</span>
+<span className="text-white/40 text-xs">User-centric experiences</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
         </main>
       </div>
     </div>
