@@ -1,11 +1,14 @@
 
 import Link from 'next/link';
 import RecentWork from '../components/RecentWork';
+import LeadooInPageBot from '../components/LeadooInPageBot';
 
 export default function Home() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full z-0">
+      <div 
+        className="absolute top-0 left-0 w-full h-full z-0"
+      >
         <div className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/20 rounded-full filter blur-3xl opacity-30"></div>
         <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-blue-500/10 rounded-full filter blur-3xl opacity-20"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl opacity-30"></div>
@@ -20,23 +23,27 @@ export default function Home() {
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-tight text-white">
                                 You focus on the business. We build the tech.
                             </h1>
-                  <p className="text-base md:text-lg font-normal text-white/70 max-w-md">
+                  <p className="text-base md:text-lg font-normal text-text-secondary max-w-md">
                                 Product teams for founders who want to move fast and launch right.
                             </p>
                 </div>
               </div>
             </div>
             <div className="lg:col-span-2 flex items-center">
-              <div className="glass-panel rounded-xl p-8 md:p-10 w-full h-full flex flex-col justify-center gap-6 items-start">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">Have an idea?</h2>
-                <p className="text-base font-normal text-white/70">
-                            Let&apos;s partner to build your MVP and scale your vision. Get a proposal in 48 hours.
-                        </p>
-                <button className="flex items-center justify-center gap-2 rounded-full h-12 px-6 bg-primary text-background-dark text-base font-bold w-full md:w-auto hover:bg-opacity-90 transition-all">
-                  <span>Start Your Project</span>
-                  <span className="material-symbols-outlined text-xl">arrow_forward</span>
-                </button>
-              </div>
+                <div className="glass-panel rounded-xl p-8 w-full h-full flex flex-col justify-center">
+                  <div className="flex flex-col gap-4">
+                    <h2 className="text-2xl font-bold text-white">Have an idea?</h2>
+                    <p className="text-text-secondary">
+                      Let's partner to build your MVP and scale your vision. Get a proposal in 48 hours.
+                    </p>
+                    <div className="mt-4">
+                        <Link href="/contact" className="inline-flex items-center gap-2 bg-primary text-black font-bold px-6 py-3 rounded-full hover:bg-primary/90 transition-colors text-sm">
+                            <span>Start Your Project</span>
+                            <span className="material-symbols-outlined">arrow_forward</span>
+                        </Link>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
             <div className="w-full max-w-6xl mx-auto flex flex-col gap-5">
@@ -87,7 +94,7 @@ export default function Home() {
 <div className="glass-panel rounded-2xl p-8 md:p-12 lg:p-20 relative overflow-hidden group">
 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-blue-500/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
 <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gradient-to-t from-primary/5 to-transparent rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
-<div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
+
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 relative z-10">
 <div className="lg:col-span-5 flex flex-col justify-between h-full">
 <div className="space-y-6">
@@ -110,37 +117,37 @@ export default function Home() {
 </div>
 </div>
 <div className="lg:col-span-7 flex flex-col gap-8">
-<div className="space-y-6 text-lg text-white/70 font-light leading-relaxed">
+<div className="space-y-6 text-lg text-text-secondary font-light leading-relaxed">
 <p>
-                      At our core, we transcend traditional development to architect bespoke digital products. Leveraging expertise in <span className="text-white font-medium">Data &amp; AI</span>, advanced <span className="text-white font-medium">Mobile/Web Applications</span>, robust <span className="text-white font-medium">Cloud infrastructures</span>, and insightful <span className="text-white font-medium">Research &amp; Design</span>, we craft not just solutions, but strategic assets. Our commitment is to empower founders with scalable technology that drives immediate impact and secures enduring market leadership.
+                      At our core, we transcend traditional development to architect bespoke digital products. Leveraging expertise in <span className="text-white font-medium">Data & AI</span>, advanced <span className="text-white font-medium">Mobile/Web Applications</span>, robust <span className="text-white font-medium">Cloud infrastructures</span>, and insightful <span className="text-white font-medium">Research & Design</span>, we craft not just solutions, but strategic assets. Our commitment is to empower founders with scalable technology that drives immediate impact and secures enduring market leadership.
                   </p>
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
 <div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
 <span className="material-symbols-outlined text-primary text-2xl">dataset</span>
-<div className="flex flex-col">
-<span className="text-white/90 text-sm font-bold">Data &amp; AI</span>
+<div class="flex flex-col">
+<span className="text-white/90 text-sm font-bold">Data & AI</span>
 <span className="text-white/40 text-xs">Intelligent automation</span>
 </div>
 </div>
 <div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
 <span className="material-symbols-outlined text-blue-400 text-2xl">devices</span>
-<div className="flex flex-col">
+<div class="flex flex-col">
 <span className="text-white/90 text-sm font-bold">Mobile/Web Apps</span>
 <span className="text-white/40 text-xs">Cross-platform solutions</span>
 </div>
 </div>
 <div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
 <span className="material-symbols-outlined text-purple-400 text-2xl">cloud</span>
-<div className="flex flex-col">
+<div class="flex flex-col">
 <span className="text-white/90 text-sm font-bold">Cloud Infrastructure</span>
 <span className="text-white/40 text-xs">Scalable architecture</span>
 </div>
 </div>
 <div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
 <span className="material-symbols-outlined text-pink-400 text-2xl">palette</span>
-<div className="flex flex-col">
-<span className="text-white/90 text-sm font-bold">Research &amp; Design</span>
+<div class="flex flex-col">
+<span className="text-white/90 text-sm font-bold">Research & Design</span>
 <span className="text-white/40 text-xs">User-centric experiences</span>
 </div>
 </div>
@@ -149,12 +156,100 @@ export default function Home() {
 </div>
 </div>
 </div>
-<RecentWork />
+
 <div className="w-full max-w-6xl mx-auto text-center mt-12 mb-16">
   <Link href="/work" className="inline-block bg-white/5 border border-white/10 rounded-full px-8 py-4 text-white font-bold text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
     View All Work
   </Link>
 </div>
+<RecentWork />
+
+<section className="relative w-full flex-grow flex items-center justify-center py-20 px-6 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 z-0 bg-mesh-gradient"></div>
+        {/* Abstract glowing orb decoration top right */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2"></div>
+        {/* Abstract glowing orb decoration bottom left */}
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/3 translate-y-1/3"></div>
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Text Content Column */}
+          <div className="lg:col-span-7 flex flex-col gap-8 order-2 lg:order-1">
+            <div className="glass-panel p-8 md:p-12 rounded-2xl relative overflow-hidden group">
+              {/* Subtle border glow on hover */}
+              <div className="absolute inset-0 border border-primary/0 group-hover:border-primary/20 rounded-2xl transition-all duration-700 pointer-events-none"></div>
+
+              <div className="relative z-10 flex flex-col gap-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white">
+                  The team you wish <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary/80 glow-text">you’d discovered sooner.</span>
+                </h1>
+                <p className="text-text-secondary text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+                  Digital transformation requires dedication and vast in-house capabilities. So, you’ll be needing <span className="text-white font-medium">empathetic UX researchers</span>, designers who put humans at the heart of every concept, <span className="text-white font-medium">award-winning developers</span> and a QA team who could perform meticulous testing in their sleep. 
+                </p>
+                <p className="text-text-secondary text-lg md:text-xl font-light leading-relaxed">
+                  That’s where a global tech consultancy like us comes in.
+                </p>
+                <div className="pt-6">
+                  <Link href="/about">
+                    <button className="group/btn relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-primary px-8 py-4 font-bold text-background-dark transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(13,223,242,0.4)]">
+                      <span className="relative z-10 text-base mr-2">Meet us</span>
+                      <span className="material-symbols-outlined relative z-10 text-lg transition-transform duration-300 group-hover/btn:translate-x-1">arrow_forward</span>
+                      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-opacity duration-500 group-hover/btn:opacity-100"></div>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust indicators / Stats (Optional enhancement for "Social Proof") */}
+            <div className="grid grid-cols-3 gap-4 px-2">
+              <div className="flex flex-col gap-1">
+                <span className="text-3xl font-bold text-white">50+</span>
+                <span className="text-sm text-text-secondary">MVPs Shipped</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-3xl font-bold text-white">98%</span>
+                <span className="text-sm text-text-secondary">Client Retention</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-3xl font-bold text-white">24/7</span>
+                <span className="text-sm text-text-secondary">Support Cycle</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Visual Column */}
+          <div className="lg:col-span-5 relative h-[500px] lg:h-[700px] w-full order-1 lg:order-2 flex items-center justify-center">
+            {/* Abstract Tech Visual */}
+            <div className="relative w-full h-full rounded-2xl overflow-hidden abstract-shape">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background-dark/90 z-10"></div>
+              <img alt="Futuristic Technology Abstract" className="w-full h-full object-cover object-center opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQidGpeLuserm6tSe2VdrYWsO_wq5DNo2bmhOOEeoh4rxbTTvrR4ggXqr7JjhkImRQCKUM1b1nvW1sYgBZG49C0OtODYawGIa-LQUHlKo8sY2hkMQxOezqNT4QwWHFGesIFc5zBC0dyvfIANJHQLABl0pThw9z9ODqjGO_sgT_rALLMWpO-KgxPYFpqY0D7-8SugCVg1pS_EKJhl2sWWNB0qNptcsAPkwuV6HoTyxeAlhXQUmVcQZJMTEzY0_Dm5p-7S9Cye0RkB1H"/>
+              {/* Floating Tech Cards Decoration */}
+              <div className="absolute top-1/4 -left-6 z-20 glass-panel p-4 rounded-xl flex items-center gap-3 animate-[pulse_4s_ease-in-out_infinite]">
+                <div className="p-2 bg-primary/20 rounded-lg text-primary">
+                  <span className="material-symbols-outlined">code</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs text-text-secondary uppercase tracking-wider">System Architecture</span>
+                  <span className="text-white font-bold text-sm">Scalable &amp; Secure</span>
+                </div>
+              </div>
+              <div className="absolute bottom-1/3 -right-4 z-20 glass-panel p-4 rounded-xl flex items-center gap-3 animate-[pulse_5s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}>
+                <div className="p-2 bg-purple-500/20 rounded-lg text-purple-400">
+                  <span className="material-symbols-outlined">psychology</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs text-text-secondary uppercase tracking-wider">UX Research</span>
+                  <span className="text-white font-bold text-sm">Human-Centric</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<LeadooInPageBot />
         </main>
       </div>
     </div>

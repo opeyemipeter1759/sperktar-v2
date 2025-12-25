@@ -3,38 +3,68 @@ import React from 'react';
 import Link from 'next/link';
 
 const Footer = () => {
+  const navLinks = [
+    { href: '/services', label: 'Services' },
+    { href: '/work', label: 'Work' },
+    { href: '#', label: 'About' },
+    { href: '#', label: 'Contact' },
+  ];
+
   return (
-    <footer className="w-full max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 mt-16">
-      <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="flex flex-col gap-4 items-center md:items-start">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="size-7 text-primary">
-              <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <g clipPath="url(#clip0_6_319)">
-                  <path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_319">
-                    <rect fill="white" height="48" width="48"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-            <h1 className="text-white text-xl font-bold">Software Building Lab</h1>
-          </Link>
-          <p className="text-sm text-white/60 max-w-xs text-center md:text-left">
-            You focus on the business. We build the tech.
-          </p>
-        </div>
-        <div className="flex flex-col items-center md:items-end gap-4">
-          <div className="flex gap-6">
-            <Link href="/services" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Services</Link>
-            <Link href="#" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Work</Link>
-            <Link href="#" className="text-sm font-medium text-white/80 hover:text-white transition-colors">About</Link>
-            <Link href="#" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Contact</Link>
+    <footer className="relative z-10 border-t border-white/10 mt-24">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+          
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <Link href="/" className="flex items-center gap-3 mb-4">
+                <div className="size-8 text-primary">
+                    <span className="material-symbols-outlined text-4xl">layers</span>
+                </div>
+                <h2 className="text-white text-xl font-bold tracking-tight">speckter</h2>
+            </Link>
+            <p className="text-sm text-secondary-text/60 max-w-sm">
+                A digital agency specializing in scalable systems, MVPs, and digital platforms for ambitious startups.
+            </p>
           </div>
-          <p className="text-sm text-white/40">
-            © {new Date().getFullYear()} Software Building Lab. All rights reserved.
+
+          <div className="md:col-span-2 flex flex-col sm:flex-row justify-between sm:justify-end items-center sm:items-start gap-10 sm:gap-20">
+            
+            <div className="flex flex-col items-center sm:items-start gap-4">
+              <h3 className="text-sm font-semibold tracking-wider uppercase text-secondary-text/80">Navigate</h3>
+              <div className="flex flex-col items-center sm:items-start gap-3">
+                {navLinks.map(link => (
+                    <Link key={link.label} href={link.href} className="text-sm text-secondary-text/60 hover:text-primary transition-colors">
+                        {link.label}
+                    </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center sm:items-start gap-4">
+              <h3 className="text-sm font-semibold tracking-wider uppercase text-secondary-text/80">Connect</h3>
+              <div className="flex flex-col items-center sm:items-start gap-3">
+                <a href="#" className="text-sm text-secondary-text/60 hover:text-primary transition-colors">LinkedIn</a>
+                <a href="#" className="text-sm text-secondary-text/60 hover:text-primary transition-colors">Twitter</a>
+                <a href="#" className="text-sm text-secondary-text/60 hover:text-primary transition-colors">GitHub</a>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center sm:items-start gap-4">
+              <h3 className="text-sm font-semibold tracking-wider uppercase text-secondary-text/80">Legal</h3>
+              <div className="flex flex-col items-center sm:items-start gap-3">
+                <Link href="#" className="text-sm text-secondary-text/60 hover:text-primary transition-colors">Privacy Policy</Link>
+                <Link href="#" className="text-sm text-secondary-text/60 hover:text-primary transition-colors">Terms of Service</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row-reverse justify-between items-center gap-4">
+          <div className="flex gap-6">
+            {/* Social Icons can go here */}
+          </div>
+          <p className="text-sm text-secondary-text/40 text-center md:text-left">
+            © {new Date().getFullYear()} speckter. All rights reserved.
           </p>
         </div>
       </div>
