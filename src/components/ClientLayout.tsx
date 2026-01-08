@@ -218,7 +218,7 @@ export default function ClientLayout({
                 onClick={() => isMobileMenuOpen && toggleMobileMenu()}
               >
                 <div className="mt-3 text-primary">
-                  <span className="text-6xl material-symbols-outlined">
+                  <span className="text-8xl material-symbols-outlined">
                     layers
                   </span>
                 </div>
