@@ -1,4 +1,3 @@
-
 export interface Project {
   category: string;
   title: string;
@@ -11,57 +10,73 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    category: 'Fintech',
-    title: 'NeoBank Mobile App',
-    description: 'Building a secure, high-concurrency banking infrastructure for the next generation of digital finance.',
-    platform: 'Mobile App',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAXQWN8ZC7fLhkXW8-PYl9zbl_VDXioBYjs2p-Nf-JWNV0ZWJbrcu4zgA9eDgvi_jtZpsFfZhLk5iycJCA1uafTBazCOQOe4MGygrFv11DjbVrn2MnSblwFRDPkF0qlsrnZTWzvRTRrY-jpfZz0hQKjChxMeHe8sEXpKsb08bMiv5nyTKrKtZvHU8LZ_RfYWnvMcEb8KqmGt6RrWRw6jbLlp1DIT_C8vkRVJ4t_NATRvruOUSTWWfFTo9LDMyJGRn6d6pikolEyXdz2',
-    caseStudyUrl: '#',
-    tags: ['React Native', 'Node.js', 'PostgreSQL', 'AWS']
-  },
-  {
-    category: 'SaaS',
-    title: 'Logistics Dashboard',
-    description: 'Real-time fleet tracking platform with predictive analytics and route optimization algorithms.',
-    platform: 'Web Platform',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQBywRpK03aFi13TdoLJCI3ayQCvXozNJVBDw9LQ0zm8MzZWae2x1XaTPRlFwqRxIUTVSQfj1Vp5NEs9-Nm808mBSADeSrtqckHqiSgR09_iUFceGQ92OZ-7k9wngsSPS8KINTUpiGOBbFmJuVzVjKSPms_ARf2_cjJzBfCVgDkle0x4g0qf1Q0pSojZ8BQeVYGBt8VAafBZFeOpcr9WIAH2ywTvcRn-O9654ggDs3yIl255I6VvY_FlOkrTPLGYW5hgy3SPtcXI9d',
-    caseStudyUrl: '#',
-    tags: ['React', 'Python/Django', 'Google Maps API', 'GCP']
-  },
-  {
-    category: 'HealthTech',
-    title: 'Telemed Portal',
-    description: 'HIPAA-compliant patient interface connecting remote specialists with rural clinics instantly.',
-    platform: 'Web App',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCR3RAN6B5k4lQ2nGTQ5X3IdSeFd21sSoUB0pkb2wt0L7LHz36LjKMG8Y1rgN4u59YkchfUkog_Xe3mQZsIuNTTSu38xyLad4FTVJBGhFuID-HYs1M5Vwr3o0YRVHShqiHVigmk6WutkN-sDy9fyfGbNnu1P1KjA9OkSOC3ft6u_IUw3i2Rot2ROb6MMwDNczePEnFLREK5KBvGdAVJjIhGvFMfWBwHXR4qmbikfbQygpbdeJG8wb8JqFQpI-XbW0Plq6upzrcaUuP-',
-    caseStudyUrl: '#',
-    tags: ['Vue.js', 'Firebase', 'WebRTC']
-  },
-  {
-    category: 'AI / ML',
-    title: 'Generative Design Tool',
-    description: 'MVP for an AI-driven creative suite that automates asset generation for game developers.',
-    platform: 'Desktop App',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDdOLhNbEtv5_lb5r0BSq7QLebo0Snp_PSiaMasWII5EwaeGA0njgACMCEo_Qlky6hIj7MfEx5rY9XUVtf8h_566VzAFD4pHH-NvwCLH5qOFjGjzubbNFlSZ_ozIzyyER30KO7N4AFsJpTrFHMYMJdsBR1LJTJlQt4mrbe3XHtR7LpNgJpt9XpubReeuYXO_kBLcs5M8__Fb3vKYGdJB8Iis2xpLdF1MNlVhOOOS6PivKUA2ZjXJL9C70Ce2e-rE7rjkhiHhd_N-pTh',
-    caseStudyUrl: '#',
-    tags: ['Electron', 'TensorFlow.js', 'Next.js']
-  },
-  {
-    category: 'eCommerce',
-    title: 'LuxRetail Platform',
-    description: 'Headless commerce solution for a luxury fashion brand with 3D product visualization.',
-    platform: 'Web Platform',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBma1OnpfACzVzPGVVlTWiIvWbA14aQD0ly7k9WBh3vpgDQpcF7e7J8Z_aoX4riY8BBMCxr8YQAEGyUbqAARdb04Y8f7BQyPEaq-ywuBGRH64tHimS1Vpj9_7h_uSB7rdmTjew8wQ-Pmce_QBO3aW78UVTwH5dT3p6P-jkDok9nVXf5e6Q4UCXYcgm2TJ7oiHatfBEanGAKv7DBas9Q8lpc56F-kbx9-5DqbojHfid7u7rHCdLxmX7WdhvbSCQl4yXdrTKpWmoViD1g',
-    caseStudyUrl: '#',
-    tags: ['Shopify Plus', 'React', 'Three.js', 'GraphQL']
-  },
-  {
-    category: 'EdTech',
-    title: 'LearnLoop LMS',
-    description: 'Scalable learning management system focusing on gamification and peer-to-peer interaction.',
+    title: 'Payment Automation Dashboard',
+    description:
+      'A streamlined dashboard for automating payment processes, tracking transactions, and ensuring smooth financial management.',
+    tags: ['Next.js', 'TypeScript', 'Node.js', 'Figma'],
+    category: 'FinTech',
     platform: 'Web & Mobile',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD4RjsIu7iiXYV3oD_SzF1IXEcETA21vzbEsgb8gODDozV51RjM7jrwV4KOtLE2m8IVHufnAX18aSsCUT7EJ-e2ExLozvLXeu9oNXNhsLRJGNhmsOTD8EcUam9uMYXO1RPGlDR5X_YWMgXc96URJ_sOdmUX9wh8JvKOZwCWX6sSAUOc2Oa8xD46KuEmOH7SZmGNGBEEMO8CW0Nvw9dwAdW6WVYHnsq5Q3SLq8SHTGTTteUp4XqkjHr9n8Bk1o5YuQ8c8ONkrFTv9h8u',
-    caseStudyUrl: '#',
-    tags: ['Next.js', 'Supabase', 'Tailwind CSS']
+    imageUrl: '/projects/spark.png',
+    caseStudyUrl: 'https://www.sparkpayhq.com/',
+  },
+  {
+    title: 'Service Plus Connect',
+    description:
+      'A service marketplace connecting users with verified professionals for easy booking across multiple service categories, featuring provider profiles, a smooth booking flow, and a fully responsive UI.',
+    tags: ['Next.js', 'TypeScript', 'Python', 'TensorFlow'],
+    category: 'Web App',
+    platform: 'Web Platform',
+    imageUrl: '/projects/spc.png',
+    caseStudyUrl: 'https://serviceplusconnect.com/',
+  },
+  {
+    title: 'Cliq Up',
+    description:
+      'A social-hangout platform that helps people discover nearby friends, join or create small-group activities, and organize hangouts. Users can build interest-based friend-groups (CLIQs), browse local events/activities, and easily connect with like-minded people.',
+    tags: ['Next.js', 'TypeScript', 'Python'],
+    category: 'Web App',
+    platform: 'Social Platform',
+    imageUrl: '/projects/cliq.png',
+    caseStudyUrl: 'https://www.cliqup.co/',
+  },
+  {
+    title: 'Members Learning & Training Dashboard',
+    description:
+      'A streamlined dashboard for delivering lessons, tracking progress, and supporting member learning and training.',
+    tags: ['Next.js', 'TypeScript', 'PHP', 'MySQL', 'Figma'],
+    category: 'Web App',
+    platform: 'Learning Platform',
+    imageUrl: '/projects/fojo.png',
+    caseStudyUrl: 'https://fojoglobal.co.uk/',
+  },
+  {
+    title: 'Attendance Management System',
+    description:
+      'A smart dashboard for tracking attendance, monitoring member activity, and providing insights for better church engagement.',
+    tags: ['React Native', 'Firebase'],
+    category: 'Mobile App',
+    platform: 'Mobile Application',
+    imageUrl: '/projects/gcc.png',
+    caseStudyUrl: 'https://gcccibadan.org/',
+  },
+  {
+    title: 'Viridis Green',
+    description:
+      'Empowering businesses to convert obstacles into competitive advantages with innovative, data-driven solutions.',
+    tags: ['Next.js', 'TypeScript'],
+    category: 'Web App',
+    platform: 'Business Platform',
+    imageUrl: '/projects/vir.png',
+    caseStudyUrl: 'https://www.viridisgreen.co.uk/',
+  },
+  {
+    title: 'Lush Corporate Service Limited',
+    description:
+      'Turn compliance into confidence with Lush Corporate Services—expert training, consulting, and coaching to help your organization thrive.',
+    tags: ['Python', 'TensorFlow'],
+    category: 'Web App',
+    platform: 'Corporate Platform',
+    imageUrl: '/projects/lush.png',
+    caseStudyUrl: 'https://www.lushcorporate.co.uk/',
   },
 ];
