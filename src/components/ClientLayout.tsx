@@ -21,7 +21,7 @@ export default function ClientLayout({
 
   const navLinks = [
     { href: '/services', label: 'Services' },
-    { href: '/work', label: 'Work' },
+    { href: '/work', label: 'Our Work' },
     { href: '#', label: 'About' },
   ];
 

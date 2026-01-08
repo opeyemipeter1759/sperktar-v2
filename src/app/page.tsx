@@ -5,6 +5,7 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import RecentWork from '../components/RecentWork';
 import LeadooInPageBot from '../components/LeadooInPageBot';
+import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -834,6 +835,8 @@ export default function Home() {
 
           <LeadooInPageBot />
         </main>
+
+        <Testimonials/>
       </div>
     </div>
   );
