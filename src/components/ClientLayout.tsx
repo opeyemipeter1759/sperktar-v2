@@ -22,7 +22,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
   const navLinks = [
     { href: '/services', label: 'Services' },
-    { href: '/work', label: 'Work' },
+    { href: '/work', label: 'Our Work' },
     { href: '#', label: 'About' },
   ];
 
@@ -49,7 +49,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
               <div className="size-8 text-primary">
                 <span className="material-symbols-outlined text-3xl">layers</span>
               </div>
-              <h2 className="text-white text-xl font-bold tracking-tight">speckter</h2>
+              <h2 className="text-white text-xl font-bold tracking-tight">sperktar</h2>
             </Link>
             <div className="hidden md:flex flex-1 justify-end gap-10 items-center">
               <nav className="flex gap-8">
