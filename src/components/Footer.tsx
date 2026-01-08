@@ -64,7 +64,7 @@ const Footer = () => {
             {/* Social Icons can go here */}
           </div>
           <p className="text-sm text-secondary-text/40 text-center md:text-left">
-            © {new Date().getFullYear()} speckter. All rights reserved.
+            © {new Date().getFullYear()} sperktar. All rights reserved.
           </p>
         </div>
       </div>
