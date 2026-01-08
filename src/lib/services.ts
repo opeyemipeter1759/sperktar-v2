@@ -19,6 +19,12 @@ export const services = [
     isLarge: false,
   },
   {
+    icon: 'manage_accounts',
+    title: 'Product Management',
+    description: 'Guiding your product from concept to launch and beyond.',
+    isLarge: false,
+  },
+  {
     icon: 'rocket_launch',
     title: 'MVP Development',
     description: 'Launch faster with a powerful Minimum Viable Product.',
