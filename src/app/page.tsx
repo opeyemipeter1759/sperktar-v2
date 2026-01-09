@@ -152,6 +152,20 @@ export default function Home() {
 <span className="text-white/40 text-xs">User-centric experiences</span>
 </div>
 </div>
+<div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
+<span className="material-symbols-outlined text-amber-400 text-2xl">inventory_2</span>
+<div className="flex flex-col">
+<span className="text-white/90 text-sm font-bold">Product Management</span>
+<span className="text-white/40 text-xs">Strategic roadmapping</span>
+</div>
+</div>
+<div className="flex items-center gap-3 p-4 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/5 transition-colors">
+<span className="material-symbols-outlined text-green-400 text-2xl">insights</span>
+<div className="flex flex-col">
+<span className="text-white/90 text-sm font-bold">Business Development</span>
+<span className="text-white/40 text-xs">Market expansion</span>
+</div>
+</div>
 </div>
 </div>
 </div>
