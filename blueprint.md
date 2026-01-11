@@ -1,8 +1,8 @@
-# Speckter Agency Blueprint
+# Sperktar Agency Blueprint
 
 ## Overview
 
-This document outlines the design, features, and technical details of the Speckter digital agency website. The site is built with Next.js and Tailwind CSS, featuring a modern, dark-themed design.
+This document outlines the design, features, and technical details of the Sperktar digital agency website. The site is built with Next.js and Tailwind CSS, featuring a modern, dark-themed design.
 
 ## Design & Style
 
@@ -14,7 +14,7 @@ This document outlines the design, features, and technical details of the Speckt
   - **Glass Border:** Translucent white (`rgba(255, 255, 255, 0.05)`)
   - **Secondary Text:** Silver/light gray (`#E5E7EB`)
 - **Typography:** `Spline Sans` is used for display text, while `Inter` is used for general content.
-- **Logo:** The brand name is "speckter" with a `layers` icon.
+- **Logo:** The brand name is "sperktar" with a `layers` icon.
 - **Overall Feel:** Modern, premium, and professional, with an emphasis on glassmorphism, soft glows, and clean typography.
 
 ## Implemented Features
