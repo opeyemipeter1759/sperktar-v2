@@ -20,19 +20,27 @@ This document outlines the design, features, and technical details of the Speckt
 ## Implemented Features
 
 - **Responsive Navigation:** A fully responsive header with a mobile menu.
-- **Contact Modal:** A modal for users to get in touch.
+- **Contact Modal:** A modal for users to get in touch, which can be triggered from multiple buttons across the site.
 - **Smooth Scrolling:** Sitewide smooth scrolling is enabled for a more fluid user experience.
 - **Home Page:**
   - **Hero Section:** A two-column layout with the main headline and subheadline on the left, and a call-to-action panel on the right.
   - **Recent Work Section:** A preview of the latest projects.
   - **Core Capabilities Section:** A detailed breakdown of the agency's core services.
-  - **Leadoo In-page Bot (Simulated):** A multi-step, conversational lead capture form embedded on the home page. It first qualifies the user by asking for their primary business challenge, then presents a contact form. This provides a more engaging and effective lead generation experience.
+  - **Leadoo In-page Bot:** A multi-step, conversational lead capture form embedded on the home page to enhance lead generation.
 - **Services Page:**
   - **How We Build Your Vision Section:** An introductory section with a grid of cards detailing the initial steps of the process.
   - **What We Offer Section:** A three-column grid of glassmorphic cards, each detailing a specific service with an icon, title, and description.
-  - **Why Choose Us Section:** A two-column grid of glassmorphic cards that highlight the agency's key differentiators: Founder Empathy, Startup Experience, Unmatched Speed, and Radical Clarity. This section includes a background grid and hover effects on the cards.
-  - **The Build Process Section:** A detailed, four-phase timeline (Discover, Design, Build, Scale) that explains the agency's development process. It features a modern design with glass-panel cards, background gradients, and a clear, step-by-step layout.
+  - **Why Choose Us Section:** A two-column grid of glassmorphic cards that highlight the agency's key differentiators: Founder Empathy, Startup Experience, Unmatched Speed, and Radical Clarity.
+  - **The Build Process Section:** A detailed, four-phase timeline (Discover, Design, Build, Scale) that explains the agency's development process.
 - **Footer:** A comprehensive footer with navigation, social links, and legal information.
+
+## Current Task: Re-implement Leadoo In-Page Bot
+
+- **Objective:** Restore the Leadoo chatbot to the home page.
+- **Steps Taken:**
+  1.  Re-created the `src/components/LeadooInPageBot.tsx` component.
+  2.  Imported and added the `<LeadooInPageBot />` component to the `src/app/page.tsx` file.
+  3.  Confirmed that the chatbot is now visible and functional on the home page.
 
 ## Project Structure
 
@@ -40,3 +48,4 @@ This document outlines the design, features, and technical details of the Speckt
 - **Styling:** Tailwind CSS
 - **Components:** Reusable components are located in `src/components`.
 - **Static Data:** Project and service information is stored in the `src/lib` directory.
+- **State Management:** A centralized `ModalContext` is used to manage the state of the contact modal across the application.

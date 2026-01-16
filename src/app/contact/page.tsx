@@ -7,8 +7,13 @@ export default function ContactPage() {
           Contact Us
         </h1>
         <p className="mx-auto max-w-2xl text-lg font-light leading-relaxed text-gray-400">
-          Have a project in mind? We&apos;d love to hear from you. You can reach us by clicking the floating contact button or the &quot;Get a Quote&quot; button in the header.
+          Have a project in mind? We&apos;d love to hear from you. Fill out the form below to get in touch.
         </p>
+      </div>
+      <div className="mx-auto mt-16 max-w-2xl">
+        <div className="glassmorphic-card rounded-lg p-8">
+          <div id="leadoo-inpage-container"></div>
+        </div>
       </div>
     </main>
   );

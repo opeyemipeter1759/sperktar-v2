@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Noto_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
+import { ModalProvider } from "@/context/ModalContext";
+import ContactModal from "@/components/ContactModal";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 const notoSans = Noto_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -50,7 +52,10 @@ export default function RootLayout({
         </style>
       </head>
       <body className={`${spaceGrotesk.className} bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary selection:text-background-dark overflow-x-hidden`}>
-        <ClientLayout>{children}</ClientLayout>
+        <ModalProvider>
+          <ClientLayout>{children}</ClientLayout>
+          <ContactModal />
+        </ModalProvider>
       </body>
     </html>
   );

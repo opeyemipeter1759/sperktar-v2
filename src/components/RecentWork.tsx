@@ -18,7 +18,7 @@ export default function RecentWork() {
             </p>
           </div>
           <Link href="/work" className="hidden md:flex items-center gap-2 text-sm font-bold text-primary hover:text-white transition-colors">
-            View All Work <span className="material-symbols-outlined">arrow_forward</span>
+            View All  <span className="material-symbols-outlined">arrow_forward</span>
           </Link>
         </div>
 
@@ -30,7 +30,7 @@ export default function RecentWork() {
 
         <div className="mt-12 text-center md:hidden">
           <Link href="/work" className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-white transition-colors">
-            View All Work <span className="material-symbols-outlined">arrow_forward</span>
+            View All <span className="material-symbols-outlined">arrow_forward</span>
           </Link>
         </div>
 

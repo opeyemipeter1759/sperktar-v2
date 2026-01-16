@@ -6,15 +6,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Footer from './Footer';
 import ContactModal from './ContactModal';
+import { useModal } from '../context/ModalContext'; // Import the hook
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
-  const [isContactModalVisible, setIsContactModalVisible] = useState(false);
+  const { openModal } = useModal(); // Use the modal context
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  const toggleContactModal = () => {
-    setIsContactModalVisible(!isContactModalVisible);
-  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -40,7 +37,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <div className="fixed top-0 left-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none translate-x-[-20%] translate-y-[-20%]"></div>
       <div className="fixed bottom-0 right-0 w-[600px] h-[600px] bg-cyan-800/10 rounded-full blur-[120px] pointer-events-none translate-x-[20%] translate-y-[20%]"></div>
 
-      <ContactModal isVisible={isContactModalVisible} onClose={toggleContactModal} />
+      <ContactModal />
 
       <div className="fixed top-0 left-0 right-0 z-50 glass-panel border-b-0 border-t-0 rounded-none bg-background-dark/80">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,9 +58,9 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
                     {link.label}
                   </Link>
                 ))}
-                <a href="#" onClick={toggleContactModal} className="text-secondary-text/80 hover:text-primary text-sm font-medium transition-colors">Contact</a>
+                <a href="#" onClick={openModal} className="text-secondary-text/80 hover:text-primary text-sm font-medium transition-colors">Contact</a>
               </nav>
-              <button onClick={toggleContactModal} className="flex cursor-pointer items-center justify-center rounded-xl h-10 px-6 bg-white/10 border border-white/10 text-white text-sm font-bold hover:bg-primary hover:border-primary transition-all duration-300">
+              <button onClick={openModal} className="flex cursor-pointer items-center justify-center rounded-xl h-10 px-6 bg-white/10 border border-white/10 text-white text-sm font-bold hover:bg-primary hover:border-primary transition-all duration-300">
                 Start a Project
               </button>
             </div>
@@ -88,9 +85,9 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
                 {link.label}
               </Link>
             ))}
-            <a href="#" onClick={() => { toggleMobileMenu(); toggleContactModal(); }} className="text-secondary-text/80 hover:text-primary text-3xl font-medium transition-colors">Contact</a>
+            <a href="#" onClick={() => { toggleMobileMenu(); openModal(); }} className="text-secondary-text/80 hover:text-primary text-3xl font-medium transition-colors">Contact</a>
           </nav>
-          <button onClick={() => { toggleMobileMenu(); toggleContactModal(); }} className="flex cursor-pointer items-center justify-center rounded-xl h-12 px-8 bg-primary text-background-dark text-lg font-bold">
+          <button onClick={() => { toggleMobileMenu(); openModal(); }} className="flex cursor-pointer items-center justify-center rounded-xl h-12 px-8 bg-primary text-background-dark text-lg font-bold">
             Start a Project
           </button>
         </div>

@@ -1,8 +1,8 @@
 
 import Link from 'next/link';
 import RecentWork from '../components/RecentWork';
-import LeadooInPageBot from '../components/LeadooInPageBot';
 import Testimonials from '../components/Testimonials';
+import LeadooInPageBot from '../components/LeadooInPageBot';
 
 export default function Home() {
   return (
