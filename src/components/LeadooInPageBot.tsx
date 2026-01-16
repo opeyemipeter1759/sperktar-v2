@@ -3,6 +3,16 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
 
+declare global {
+  interface Window {
+    Leadoo?: {
+      Inpage: {
+        reset: () => void;
+      };
+    };
+  }
+}
+
 const LeadooInPageBot = () => {
   useEffect(() => {
     if (window.Leadoo) {
