@@ -218,7 +218,7 @@ function ClientLayoutContent({
                   </span>
                 </div>
                 <h2 className="text-xl font-bold tracking-tight text-white">
-                  Speckter
+                  Sperktar
                 </h2>
               </Link>
             </motion.div>
