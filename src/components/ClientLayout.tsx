@@ -5,18 +5,20 @@ import { usePathname } from 'next/navigation';
 import Footer from './Footer';
 import ContactModal from './ContactModal';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ModalProvider, useModal } from '@/context/ModalContext';
 
-export default function ClientLayout({
+function ClientLayoutContent({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [isContactModalVisible, setIsContactModalVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { openModal, closeModal } = useModal();
 
-  const toggleContactModal = () =>
-    setIsContactModalVisible(!isContactModalVisible);
+  const toggleContactModal = () => {
+    openModal();
+  };
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   const navLinks = [
@@ -190,14 +192,7 @@ export default function ClientLayout({
         />
       </motion.div>
 
-      {isContactModalVisible && (
-        <div>
-          <ContactModal
-            isVisible={isContactModalVisible}
-            onClose={toggleContactModal}
-          />
-        </div>
-      )}
+      <ContactModal />
       <motion.div
         className="fixed top-0 left-0 right-0 z-50 border-t-0 border-b-0 rounded-none glass-panel bg-background-dark/80 backdrop-blur-md"
         variants={headerVariants}
@@ -446,5 +441,17 @@ export default function ClientLayout({
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+export default function ClientLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <ModalProvider>
+      <ClientLayoutContent>{children}</ClientLayoutContent>
+    </ModalProvider>
   );
 }
