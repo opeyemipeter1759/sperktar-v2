@@ -8,7 +8,7 @@ const ContactModal = () => {
 
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-50 z-[100]  backdrop-blur-sm transition-opacity duration-300 ${
+      className={`fixed inset-0 bg-black bg-opacity-90 z-[100] h-full backdrop-blur-sm transition-opacity duration-300 ${
         isModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
       onClick={closeModal}
