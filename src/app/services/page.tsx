@@ -156,7 +156,7 @@ export default function ServicesPage() {
         <div className="absolute left-0 top-0 h-full w-full bg-[linear-gradient(to_right,rgba(51, 59, 60, 0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(6,182,212,0.08)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
       </div>
       <div className="w-full max-w-6xl">
-        <main className="flex flex-col items-center gap-8 px-4 py-16 text-center sm:py-24">
+        {/* <main className="flex flex-col items-center gap-8 px-4 py-16 text-center sm:py-24">
           <motion.h2
             className="text-4xl font-bold tracking-tighter text-transparent text-white sm:text-5xl md:text-6xl bg-clip-text bg-gradient-to-r from-white to-gray-400"
             initial={{ opacity: 0, y: 30 }}
@@ -214,7 +214,7 @@ export default function ServicesPage() {
               </Link>
             ))}
           </motion.div>
-        </main>
+        </main> */}
         <section className="flex flex-col items-center gap-8 px-4 py-16 text-center sm:py-24">
           <motion.h2
             className="text-4xl font-bold tracking-tighter text-transparent text-white sm:text-5xl md:text-6xl bg-clip-text bg-gradient-to-r from-white to-gray-400"
