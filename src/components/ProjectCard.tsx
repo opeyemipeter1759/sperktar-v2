@@ -32,14 +32,14 @@ export default function ProjectCard({
         borderColor: 'rgba(13,223,242,0.4)',
         boxShadow: '0 10px 40px -10px rgba(0,0,0,0.5)',
       }}
-      transition={{ duration: 0.25 }}
+      transition={{ duration: 0.15 }}
     >
       <div className="relative w-full aspect-[16/10] overflow-hidden bg-surface-dark">
         <motion.div
           className="absolute inset-0 bg-center bg-cover"
           style={{ backgroundImage: `url('${imageUrl}')` }}
           whileHover={{ scale: 1.08 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.2 }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent opacity-80"></div>
         <motion.div
@@ -47,7 +47,7 @@ export default function ProjectCard({
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.1 }}
+          transition={{ duration: 0.2, delay: 0.05 }}
         >
           <span className="inline-flex items-center px-3 py-1 text-xs font-medium text-blue-200 border rounded-full border-white/10 bg-black/40 backdrop-blur-md">
             {category}
@@ -60,7 +60,7 @@ export default function ProjectCard({
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.15 }}
+          transition={{ duration: 0.2, delay: 0.08 }}
         >
           {title}
         </motion.h3>
@@ -69,7 +69,7 @@ export default function ProjectCard({
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.2 }}
+          transition={{ duration: 0.15, delay: 0.1 }}
         >
           {description}
         </motion.p>
@@ -78,7 +78,7 @@ export default function ProjectCard({
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.25 }}
+          transition={{ duration: 0.2, delay: 0.15 }}
         >
           {tags.map((tag, index) => (
             <motion.span
@@ -87,7 +87,7 @@ export default function ProjectCard({
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.2, delay: 0.3 + index * 0.05 }}
+              transition={{ duration: 0.15, delay: 0.2 + index * 0.03 }}
               whileHover={{ scale: 1.1 }}
             >
               {tag}
@@ -99,7 +99,7 @@ export default function ProjectCard({
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.35 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
         >
           <span className="text-xs font-medium tracking-wider uppercase text-white/50">
             {platform}

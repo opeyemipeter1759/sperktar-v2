@@ -131,18 +131,18 @@ const motionVariants = {
     show: {
       opacity: 1,
       y: 0,
-      transition: { staggerChildren: 0.08, when: 'beforeChildren' },
+      transition: { staggerChildren: 0.04, when: 'beforeChildren' },
     },
   },
   item: {
     hidden: { opacity: 0, y: 12, scale: 0.98 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.45 } },
-    hover: { scale: 1.03, y: -6, transition: { duration: 0.18 } },
+    show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.25 } },
+    hover: { scale: 1.03, y: -6, transition: { duration: 0.1 } },
   },
   float: {
     animate: {
       y: [0, -6, 0],
-      transition: { repeat: Infinity, duration: 4, ease: 'easeInOut' },
+      transition: { repeat: Infinity, duration: 2, ease: 'easeInOut' },
     },
   },
 };
@@ -161,7 +161,7 @@ export default function ServicesPage() {
             className="text-4xl font-bold tracking-tighter text-transparent text-white sm:text-5xl md:text-6xl bg-clip-text bg-gradient-to-r from-white to-gray-400"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
           >
             How We Build Your Vision
           </motion.h2>
@@ -169,7 +169,7 @@ export default function ServicesPage() {
             className="max-w-2xl text-base font-normal leading-relaxed text-secondary-text sm:text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
             You focus on the business. We build the tech. A complete product
             development lifecycle under one roof.
@@ -205,7 +205,7 @@ export default function ServicesPage() {
                   >
                     {service.description}
                   </p>
-                  <div className="absolute right-6 top-6 opacity-0 transform translate-x-[-10px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                  <div className="absolute right-6 top-6 opacity-0 transform translate-x-[-10px] transition-all duration-150 group-hover:opacity-100 group-hover:translate-x-0">
                     <span className="material-symbols-outlined text-primary">
                       arrow_forward
                     </span>
@@ -221,7 +221,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
           >
             Explore Our Services
           </motion.h2>
@@ -230,7 +230,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
             Click on a service to learn more about how we can help you achieve
             your goals.
@@ -266,7 +266,7 @@ export default function ServicesPage() {
                   >
                     {service.description}
                   </p>
-                  <div className="absolute right-6 top-6 opacity-0 transform translate-x-[-10px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                  <div className="absolute right-6 top-6 opacity-0 transform translate-x-[-10px] transition-all duration-150 group-hover:opacity-100 group-hover:translate-x-0">
                     <span className="material-symbols-outlined text-primary">
                       arrow_forward
                     </span>
@@ -282,14 +282,14 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
           >
             <motion.h1
               className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
             >
               Why Choose Us
             </motion.h1>
@@ -298,7 +298,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
             >
               You focus on the business. We build the tech.
             </motion.p>
@@ -467,7 +467,11 @@ export default function ServicesPage() {
                       <motion.span
                         className="material-symbols-outlined text-primary"
                         animate={{ rotate: [0, 5, -5, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 3,
+                        }}
                       >
                         search
                       </motion.span>
@@ -571,7 +575,12 @@ export default function ServicesPage() {
                       <motion.span
                         className="material-symbols-outlined text-primary"
                         animate={{ rotate: [0, -5, 5, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: 0.5 }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 3,
+                          delay: 0.5,
+                        }}
                       >
                         design_services
                       </motion.span>
@@ -635,7 +644,12 @@ export default function ServicesPage() {
                       <motion.span
                         className="material-symbols-outlined text-primary"
                         animate={{ rotate: [0, 5, -5, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: 1 }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 3,
+                          delay: 1,
+                        }}
                       >
                         code
                       </motion.span>
@@ -738,7 +752,12 @@ export default function ServicesPage() {
                       <motion.span
                         className="material-symbols-outlined text-primary"
                         animate={{ y: [0, -3, 0] }}
-                        transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: 1.5 }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 3,
+                          delay: 1.5,
+                        }}
                       >
                         trending_up
                       </motion.span>

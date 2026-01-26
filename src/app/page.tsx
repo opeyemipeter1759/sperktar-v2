@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import RecentWork from '../components/RecentWork';
-import LeadooInPageBot from '../components/LeadooInPageBot';
 import Testimonials from '@/components/Testimonials';
 import Image from 'next/image';
 
@@ -26,7 +25,7 @@ export default function Home() {
             opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
-            duration: 4,
+            duration: 2,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
@@ -38,7 +37,7 @@ export default function Home() {
             opacity: [0.2, 0.35, 0.2],
           }}
           transition={{
-            duration: 5,
+            duration: 2.5,
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 0.5,
@@ -51,94 +50,56 @@ export default function Home() {
             opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
-            duration: 6,
+            duration: 3,
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 0.25,
           }}
         />
       </motion.div>
-      <div className="relative z-10 flex flex-col min-h-screen px-4 sm:px-6 lg:px-8">
-        <main className="flex flex-col items-center justify-center flex-grow gap-8 py-12 lg:py-20">
-          <div className="grid w-full max-w-6xl grid-cols-1 gap-8 mx-auto lg:grid-cols-5">
+      <div className="relative z-10 flex flex-col min-h-screen ">
+        <main className="flex flex-col items-center justify-center flex-grow gap-8 ">
+          <div className="grid w-full grid-cols-1 gap-8 mx-auto hero max-full ">
             <motion.div
-              className="flex items-center lg:col-span-3"
+              className="flex items-center "
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 0.35,
+                duration: 0.2,
                 ease: [0.23, 1, 0.32, 1],
                 delay: 0.05,
               }}
             >
               <motion.div
-                className="flex flex-col justify-center w-full h-full p-8 glass-panel rounded-xl md:p-12 lg:p-16"
+                className="flex flex-col justify-center w-full h-full p-8 rounded-xl md:p-12 lg:p-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: 0.1 }}
+                transition={{ duration: 0.2, delay: 0.05 }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex flex-col gap-6 text-left">
+                <div className="flex flex-col gap-6 text-center">
                   <motion.h1
-                    className="text-4xl font-black leading-tight tracking-tighter text-white md:text-5xl lg:text-6xl"
+                    className="text-5xl font-black leading-tight tracking-tighter text-white max-w-[900px] mx-auto md:text-5xl lg:text-7xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35, delay: 0.15 }}
+                    transition={{ duration: 0.2, delay: 0.1 }}
                   >
                     You focus on the business. We build the tech.
                   </motion.h1>
                   <motion.p
-                    className="max-w-md text-base font-normal md:text-lg text-text-secondary"
+                    className="text-base font-normal text-white md:text-lg"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35, delay: 0.2 }}
+                    transition={{ duration: 0.2, delay: 0.15 }}
                   >
                     Product teams for founders who want to move fast and launch
                     right.
-                  </motion.p>
-                </div>
-              </motion.div>
-            </motion.div>
-            <motion.div
-              className="flex items-center lg:col-span-2"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.35,
-                ease: [0.23, 1, 0.32, 1],
-                delay: 0.08,
-              }}
-            >
-              <motion.div
-                className="flex flex-col justify-center w-full h-full p-8 glass-panel rounded-xl"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: 0.12 }}
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="flex flex-col gap-4">
-                  <motion.h2
-                    className="text-2xl font-bold text-white"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.15 }}
-                  >
-                    Have an idea?
-                  </motion.h2>
-                  <motion.p
-                    className="text-text-secondary"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.2 }}
-                  >
-                    Let&apos;s partner to build your MVP and scale your vision.
-                    Get a proposal in 48 hours.
                   </motion.p>
                   <motion.div
                     className="mt-4"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.25 }}
+                    transition={{ duration: 0.2, delay: 0.2 }}
                   >
                     <Link href="/contact">
                       <motion.div
@@ -154,7 +115,7 @@ export default function Home() {
                           className="material-symbols-outlined"
                           animate={{ x: [0, 4, 0] }}
                           transition={{
-                            duration: 1.5,
+                            duration: 0.8,
                             repeat: Infinity,
                             repeatDelay: 2,
                           }}
@@ -173,14 +134,14 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.35, delay: 0.08 }}
+            transition={{ duration: 0.2, delay: 0.05 }}
           >
             <motion.div
               className="flex items-center gap-4"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <span className="pl-2 text-xs font-bold tracking-widest uppercase text-white/40">
                 Scaling Tech For
@@ -190,7 +151,7 @@ export default function Home() {
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: 0.1 }}
+                transition={{ duration: 0.2, delay: 0.05 }}
               />
             </motion.div>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
@@ -304,8 +265,8 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{
-                    duration: 0.3,
-                    delay: index * 0.05,
+                    duration: 0.2,
+                    delay: index * 0.03,
                     type: 'spring',
                     stiffness: 300,
                     damping: 25,
@@ -320,7 +281,7 @@ export default function Home() {
                     <motion.span
                       className="text-4xl text-white material-symbols-outlined"
                       whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-                      transition={{ duration: 0.25 }}
+                      transition={{ duration: 0.15 }}
                     >
                       {logo.icon}
                     </motion.span>
@@ -337,14 +298,14 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.35 }}
+            transition={{ duration: 0.2 }}
           >
             <motion.div
               className="relative p-8 overflow-hidden glass-panel rounded-2xl md:p-12 lg:p-20 group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.35, delay: 0.05 }}
+              transition={{ duration: 0.2, delay: 0.05 }}
               whileHover={{ scale: 1.01 }}
             >
               <motion.div
@@ -354,7 +315,7 @@ export default function Home() {
                   opacity: [0.5, 0.8, 0.5],
                 }}
                 transition={{
-                  duration: 8,
+                  duration: 4,
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
@@ -366,7 +327,7 @@ export default function Home() {
                   opacity: [0.3, 0.6, 0.3],
                 }}
                 transition={{
-                  duration: 10,
+                  duration: 5,
                   repeat: Infinity,
                   ease: 'easeInOut',
                   delay: 1,
@@ -379,7 +340,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: 0.1 }}
+                  transition={{ duration: 0.2, delay: 0.05 }}
                 >
                   <div className="space-y-6">
                     <motion.div
@@ -387,7 +348,7 @@ export default function Home() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.5 }}
+                      transition={{ duration: 0.3, delay: 0.2 }}
                     >
                       <motion.span
                         className="w-1.5 h-1.5 rounded-full bg-primary"
@@ -403,7 +364,7 @@ export default function Home() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.35, delay: 0.2 }}
+                      transition={{ duration: 0.2, delay: 0.1 }}
                     >
                       Future-Proofing Your Vision:{' '}
                       <br className="hidden lg:block" />
@@ -422,7 +383,7 @@ export default function Home() {
                       xmlns="http://www.w3.org/2000/svg"
                       animate={{ rotate: [0, 360] }}
                       transition={{
-                        duration: 20,
+                        duration: 12,
                         repeat: Infinity,
                         ease: 'linear',
                       }}
@@ -449,7 +410,7 @@ export default function Home() {
                         initial={{ pathLength: 0 }}
                         whileInView={{ pathLength: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1.5, delay: 1 }}
+                        transition={{ duration: 0.8, delay: 0.5 }}
                       />
                       <motion.circle
                         cx="50"
@@ -468,14 +429,14 @@ export default function Home() {
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
+                  transition={{ duration: 0.3, delay: 0.2 }}
                 >
                   <motion.div
                     className="space-y-6 text-lg font-light leading-relaxed text-text-secondary"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.35, delay: 0.2 }}
+                    transition={{ duration: 0.2, delay: 0.1 }}
                   >
                     <p>
                       At our core, we transcend traditional development to
@@ -523,7 +484,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.35, delay: 0.25 }}
+                    transition={{ duration: 0.2, delay: 0.15 }}
                   >
                     {[
                       {
@@ -558,8 +519,8 @@ export default function Home() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{
-                          duration: 0.25,
-                          delay: 0.3 + index * 0.05,
+                          duration: 0.15,
+                          delay: 0.2 + index * 0.03,
                         }}
                         whileHover={{
                           scale: 1.05,
@@ -572,7 +533,7 @@ export default function Home() {
                         <motion.span
                           className={`text-2xl material-symbols-outlined ${item.color}`}
                           whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-                          transition={{ duration: 0.25 }}
+                          transition={{ duration: 0.15 }}
                         >
                           {item.icon}
                         </motion.span>
@@ -928,8 +889,6 @@ export default function Home() {
               </motion.div>
             </div>
           </motion.section>
-
-          <LeadooInPageBot />
         </main>
 
         <Testimonials />

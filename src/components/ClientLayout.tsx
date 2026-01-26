@@ -7,11 +7,7 @@ import ContactModal from './ContactModal';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ModalProvider, useModal } from '@/context/ModalContext';
 
-function ClientLayoutContent({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function ClientLayoutContent({ children }: { children: React.ReactNode }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const { openModal, closeModal } = useModal();
@@ -37,17 +33,17 @@ function ClientLayoutContent({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
-        staggerChildren: 0.1,
-        delayChildren: 0.1,
+        duration: 0.2,
+        staggerChildren: 0.05,
+        delayChildren: 0.05,
       },
     },
     exit: {
       opacity: 0,
       y: -50,
       transition: {
-        duration: 0.2,
-        staggerChildren: 0.05,
+        duration: 0.15,
+        staggerChildren: 0.03,
         staggerDirection: -1,
       },
     },

@@ -5,14 +5,15 @@ import ProjectCard from '../../components/ProjectCard';
 import { projects } from '../../lib/projects';
 import { useState } from 'react';
 
-const allCategories = ['All', ...new Set(projects.map(p => p.category))];
+const allCategories = ['All', ...new Set(projects.map((p) => p.category))];
 
 export default function WorkPage() {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(p => p.category === activeFilter);
+  const filteredProjects =
+    activeFilter === 'All'
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
 
   return (
     <main className="relative z-10 pt-32 pb-24">
@@ -21,35 +22,39 @@ export default function WorkPage() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, delay: 0.05 }}
+          transition={{ duration: 0.2, delay: 0.05 }}
         >
           <motion.div
             className="flex flex-col gap-4"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.35, delay: 0.1 }}
+            transition={{ duration: 0.2, delay: 0.05 }}
           >
             <motion.div
               className="w-12 h-1 bg-primary rounded-full mb-2"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 0.35, delay: 0.15 }}
+              transition={{ duration: 0.2, delay: 0.1 }}
             />
             <motion.h1
               className="text-5xl md:text-7xl font-bold tracking-tighter text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, delay: 0.2 }}
+              transition={{ duration: 0.2, delay: 0.15 }}
             >
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">Work</span>
+              Our{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">
+                Work
+              </span>
             </motion.h1>
             <motion.p
               className="text-xl text-white/60 max-w-2xl font-light"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35, delay: 0.25 }}
+              transition={{ duration: 0.2, delay: 0.2 }}
             >
-              A collection of our best work. We build scalable systems and MVPs for the world's most ambitious startups.
+              A collection of our best work. We build scalable systems and MVPs
+              for the world's most ambitious startups.
             </motion.p>
           </motion.div>
         </motion.div>
@@ -58,21 +63,23 @@ export default function WorkPage() {
           className="mb-12 flex flex-wrap items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35, delay: 0.3 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
         >
           {allCategories.map((category, index) => (
             <motion.button
               key={category}
               onClick={() => setActiveFilter(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300 
-                ${activeFilter === category 
-                  ? 'bg-primary text-white' 
-                  : 'bg-white/5 text-white/70 hover:bg-white/10'}`}
+                ${
+                  activeFilter === category
+                    ? 'bg-primary text-white'
+                    : 'bg-white/5 text-white/70 hover:bg-white/10'
+                }`}
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{
-                duration: 0.3,
-                delay: 0.35 + index * 0.05,
+                duration: 0.2,
+                delay: 0.25 + index * 0.03,
                 type: 'spring',
                 stiffness: 300,
               }}
@@ -99,8 +106,8 @@ export default function WorkPage() {
                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{
-                  duration: 0.35,
-                  delay: index * 0.08,
+                  duration: 0.2,
+                  delay: index * 0.04,
                   type: 'spring',
                   stiffness: 300,
                   damping: 25,

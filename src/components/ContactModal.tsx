@@ -8,13 +8,13 @@ const ContactModal = () => {
 
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-90 z-[100] h-full backdrop-blur-sm transition-opacity duration-300 ${
+      className={`fixed inset-0 bg-black bg-opacity-90 z-[100] h-full backdrop-blur-sm transition-opacity duration-150 ${
         isModalOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
       onClick={closeModal}
     >
       <div
-        className={`glassmorphic-card fixed top-0 right-0 h-full w-full max-w-md shadow-2xl z-[110] transform transition-transform duration-300 ease-in-out ${
+        className={`glassmorphic-card fixed top-0 right-0 h-full w-full max-w-md shadow-2xl z-[110] transform transition-transform duration-150 ease-in-out ${
           isModalOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         onClick={(e) => e.stopPropagation()}

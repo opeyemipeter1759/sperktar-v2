@@ -13,14 +13,22 @@ export default function RecentWork() {
           <div className="flex flex-col gap-4">
             <div className="w-12 h-1 mb-2 rounded-full bg-primary"></div>
             <h2 className="text-4xl font-bold tracking-tighter text-white md:text-6xl">
-              Recent <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">Work</span>
+              Recent{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">
+                Work
+              </span>
             </h2>
             <p className="max-w-2xl text-lg font-light md:text-xl text-secondary-text/60">
-              Scalable systems and MVPs built for the world's most ambitious startups. You focus on the business. We build the tech.
+              Scalable systems and MVPs built for the world's most ambitious
+              startups. You focus on the business. We build the tech.
             </p>
           </div>
-          <Link href="/work" className="items-center hidden gap-2 text-sm font-bold transition-colors md:flex text-primary hover:text-white">
-            View All  <span className="material-symbols-outlined">arrow_forward</span>
+          <Link
+            href="/work"
+            className="items-center hidden gap-2 text-sm font-bold transition-colors md:flex text-primary hover:text-white"
+          >
+            View All{' '}
+            <span className="material-symbols-outlined">arrow_forward</span>
           </Link>
         </div>
 
@@ -32,8 +40,8 @@ export default function RecentWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{
-                duration: 0.35,
-                delay: 0.3 + index * 0.08,
+                duration: 0.2,
+                delay: 0.2 + index * 0.04,
                 type: 'spring',
                 stiffness: 300,
                 damping: 25,
@@ -45,11 +53,14 @@ export default function RecentWork() {
         </div>
 
         <div className="mt-12 text-center md:hidden">
-          <Link href="/work" className="inline-flex items-center gap-2 text-sm font-bold transition-colors text-primary hover:text-white">
-            View All <span className="material-symbols-outlined">arrow_forward</span>
+          <Link
+            href="/work"
+            className="inline-flex items-center gap-2 text-sm font-bold transition-colors text-primary hover:text-white"
+          >
+            View All{' '}
+            <span className="material-symbols-outlined">arrow_forward</span>
           </Link>
         </div>
-
       </div>
     </section>
   );
