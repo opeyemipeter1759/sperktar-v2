@@ -20,7 +20,7 @@ function ClientLayoutContent({ children }: { children: React.ReactNode }) {
   const navLinks = [
     { href: '/services', label: 'Services' },
     { href: '/work', label: 'Our Work' },
-    { href: '#', label: 'About' },
+    // { href: '/about', label: 'About' },
   ];
 
   useEffect(() => {

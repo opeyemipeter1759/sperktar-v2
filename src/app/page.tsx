@@ -700,7 +700,7 @@ export default function Home() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.35, delay: 0.35 }}
                     >
-                      <Link href="/about">
+                      <Link href="/contact">
                         <motion.button
                           className="relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-bold rounded-lg group/btn bg-primary text-background-dark"
                           whileHover={{

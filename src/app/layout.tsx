@@ -13,7 +13,7 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Speckter',
+  title: 'Sperktar',
   description:
     'At our core, we transcend traditional development to architect bespoke digital products. Leveraging expertise in Data & AI, advanced Mobile/Web Applications, robust Cloud infrastructures, and insightful Research & Design, we craft not just solutions, but strategic assets. Our commitment is to empower founders with scalable technology that drives immediate impact and secures enduring market leadership.',
 };
@@ -96,7 +96,7 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Speckter',
+  title: 'Sperktar',
   description:
     'At our core, we transcend traditional development to architect bespoke digital products. Leveraging expertise in Data & AI, advanced Mobile/Web Applications, robust Cloud infrastructures, and insightful Research & Design, we craft not just solutions, but strategic assets. Our commitment is to empower founders with scalable technology that drives immediate impact and secures enduring market leadership.',
 };
