@@ -14,7 +14,7 @@ This document outlines the design, features, and technical details of the Sperkt
   - **Glass Border:** Translucent white (`rgba(255, 255, 255, 0.05)`)
   - **Secondary Text:** Silver/light gray (`#E5E7EB`)
 - **Typography:** `Spline Sans` is used for display text, while `Inter` is used for general content.
-- **Logo:** The brand name is "Sperktar" with a `layers` icon.
+- **Logo:** The brand name is "sperktar" with a `layers` icon.
 - **Overall Feel:** Modern, premium, and professional, with an emphasis on glassmorphism, soft glows, and clean typography.
 
 ## Implemented Features
@@ -32,15 +32,10 @@ This document outlines the design, features, and technical details of the Sperkt
   - **What We Offer Section:** A three-column grid of glassmorphic cards, each detailing a specific service with an icon, title, and description.
   - **Why Choose Us Section:** A two-column grid of glassmorphic cards that highlight the agency's key differentiators: Founder Empathy, Startup Experience, Unmatched Speed, and Radical Clarity.
   - **The Build Process Section:** A detailed, four-phase timeline (Discover, Design, Build, Scale) that explains the agency's development process.
-- **Footer:** A comprehensive footer with navigation, social links, and legal information.
-
-## Current Task: Re-implement Leadoo In-Page Bot
-
-- **Objective:** Restore the Leadoo chatbot to the home page.
-- **Steps Taken:**
-  1.  Re-created the `src/components/LeadooInPageBot.tsx` component.
-  2.  Imported and added the `<LeadooInPageBot />` component to the `src/app/page.tsx` file.
-  3.  Confirmed that the chatbot is now visible and functional on the home page.
+- **Legal Pages:**
+    - **Privacy Policy Page:** A dedicated page for the company's privacy policy.
+    - **Terms of Service Page:** A dedicated page for the company's terms of service.
+- **Footer:** A comprehensive footer with navigation and legal information. Social media links have been removed.
 
 ## Project Structure
 
