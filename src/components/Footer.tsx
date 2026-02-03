@@ -1,14 +1,22 @@
+'use client';
 
 import React from 'react';
 import Link from 'next/link';
+import { useModal } from '../context/ModalContext';
 
 const Footer = () => {
+  const { openModal } = useModal();
+
   const navLinks = [
     { href: '/services', label: 'Services' },
     { href: '/work', label: 'Our Work' },
     // { href: '#', label: 'About' },
-    { href: '#', label: 'Contact' },
   ];
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    openModal();
+  };
 
   return (
     <footer className="relative z-10 border-t border-white/10 mt-24">
@@ -37,6 +45,9 @@ const Footer = () => {
                         {link.label}
                     </Link>
                 ))}
+                <a href="#" onClick={handleContactClick} className="text-sm text-secondary-text/60 hover:text-primary transition-colors">
+                  Contact
+                </a>
               </div>
             </div>
 

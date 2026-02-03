@@ -1,46 +1,33 @@
-# Sperktar Agency Blueprint
+# Project Blueprint
 
 ## Overview
 
-This document outlines the design, features, and technical details of the Sperktar digital agency website. The site is built with Next.js and Tailwind CSS, featuring a modern, dark-themed design.
-
-## Design & Style
-
-- **Color Palette:**
-  - **Primary:** Vibrant cyan (`#06B6D4`)
-  - **Primary Hover:** Darker cyan (`#0891b2`)
-  - **Background:** Very dark gray (`#18181B`)
-  - **Glass Background:** Translucent dark gray (`rgba(24, 24, 27, 0.7)`)
-  - **Glass Border:** Translucent white (`rgba(255, 255, 255, 0.05)`)
-  - **Secondary Text:** Silver/light gray (`#E5E7EB`)
-- **Typography:** `Spline Sans` is used for display text, while `Inter` is used for general content.
-- **Logo:** The brand name is "sperktar" with a `layers` icon.
-- **Overall Feel:** Modern, premium, and professional, with an emphasis on glassmorphism, soft glows, and clean typography.
+This document outlines the development plan and features for the Sperktar Next.js application. It serves as a single source of truth for the project's architecture, design, and implemented features.
 
 ## Implemented Features
 
-- **Responsive Navigation:** A fully responsive header with a mobile menu.
-- **Contact Modal:** A modal for users to get in touch, which can be triggered from multiple buttons across the site.
-- **Smooth Scrolling:** Sitewide smooth scrolling is enabled for a more fluid user experience.
-- **Home Page:**
-  - **Hero Section:** A two-column layout with the main headline and subheadline on the left, and a call-to-action panel on the right.
-  - **Recent Work Section:** A preview of the latest projects.
-  - **Core Capabilities Section:** A detailed breakdown of the agency's core services.
-  - **Leadoo In-page Bot:** A multi-step, conversational lead capture form embedded on the home page to enhance lead generation.
-- **Services Page:**
-  - **How We Build Your Vision Section:** An introductory section with a grid of cards detailing the initial steps of the process.
-  - **What We Offer Section:** A three-column grid of glassmorphic cards, each detailing a specific service with an icon, title, and description.
-  - **Why Choose Us Section:** A two-column grid of glassmorphic cards that highlight the agency's key differentiators: Founder Empathy, Startup Experience, Unmatched Speed, and Radical Clarity.
-  - **The Build Process Section:** A detailed, four-phase timeline (Discover, Design, Build, Scale) that explains the agency's development process.
-- **Legal Pages:**
-    - **Privacy Policy Page:** A dedicated page for the company's privacy policy.
-    - **Terms of Service Page:** A dedicated page for the company's terms of service.
-- **Footer:** A comprehensive footer with navigation and legal information. Social media links have been removed.
+### Core Application Setup
 
-## Project Structure
+*   **Framework:** Next.js with App Router
+*   **Styling:** Tailwind CSS
+*   **Components:**
+    *   Header with navigation
+    *   Footer with navigation and legal links
+    *   Contact Modal for user inquiries
+*   **Context:**
+    *   `ModalContext` for managing the contact modal state.
 
-- **Framework:** Next.js with App Router
-- **Styling:** Tailwind CSS
-- **Components:** Reusable components are located in `src/components`.
-- **Static Data:** Project and service information is stored in the `src/lib` directory.
-- **State Management:** A centralized `ModalContext` is used to manage the state of the contact modal across the application.
+### Feature Enhancements
+
+*   **Contact Modal Integration:**
+    *   The "Contact" link in the footer now opens the contact modal, providing a consistent user experience with the header.
+*   **Image Optimization:**
+    *   Replaced an external image URL in `src/app/page.tsx` with a locally stored image (`public/images/futuristic-tech.jpg`) to improve performance and reliability.
+    *   Applied a blur effect to the background image to enhance the readability of the overlaying text.
+
+## Current Task: Update Image and Apply Blur Effect
+
+The current task is to update the `src/app/page.tsx` file to use the locally downloaded image and apply a blur effect.
+
+*   **Action:** Modify the `src/app/page.tsx` file.
+*   **Change:** Update the `src` attribute of the `motion.img` component to point to the local image path (`/images/futuristic-tech.jpg`) and add a `filter blur-sm` class.
