@@ -7,7 +7,7 @@ const Footer = () => {
     { href: '/services', label: 'Services' },
     { href: '/work', label: 'Our Work' },
     // { href: '#', label: 'About' },
-    { href: '#', label: 'Contact' },
+    { href: '#', label: 'Contact Us' },
   ];
 
   return (
@@ -37,15 +37,6 @@ const Footer = () => {
                         {link.label}
                     </Link>
                 ))}
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center sm:items-start gap-4">
-              <h3 className="text-sm font-semibold tracking-wider uppercase text-secondary-text/80">Connect</h3>
-              <div className="flex flex-col items-center sm:items-start gap-3">
-                <a href="#" className="text-sm text-secondary-text/60 hover:text-primary transition-colors">LinkedIn</a>
-                <a href="#" className="text-sm text-secondary-text/60 hover:text-primary transition-colors">Twitter</a>
-                <a href="#" className="text-sm text-secondary-text/60 hover:text-primary transition-colors">GitHub</a>
               </div>
             </div>
 

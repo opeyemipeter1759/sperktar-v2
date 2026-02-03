@@ -571,7 +571,7 @@ export default function Home() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
-                View All Work
+                View All
               </motion.div>
             </Link>
           </motion.div>
