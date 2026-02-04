@@ -613,7 +613,7 @@ export default function Home() {
                 delay: 1,
               }}
             />
-
+</motion.section>
             <div className="relative z-10 grid items-center w-full grid-cols-1 gap-12 mx-auto max-w-7xl lg:grid-cols-12">
               {/* Text Content Column */}
               <motion.div
@@ -888,10 +888,6 @@ export default function Home() {
                 </motion.div>
               </motion.div>
             </div>
-<<<<<<< HEAD
-          </motion.section>
-=======
-          </div>
             <div className="w-full max-w-6xl mx-auto flex flex-col gap-5">
                 <div className="flex items-center gap-4">
                     <span className="text-white/40 text-xs font-bold tracking-widest uppercase pl-2">Scaling Tech For</span>
@@ -1104,8 +1100,6 @@ export default function Home() {
       </section>
 
 <Testimonials />
-<LeadooInPageBot />
->>>>>>> daniel-branch
         </main>
 
         <Testimonials />
