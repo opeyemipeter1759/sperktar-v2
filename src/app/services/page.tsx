@@ -9,34 +9,34 @@ const services = [
     description:
       'Charting the course from idea to market-fit with data-driven insights.',
     icon: 'explore',
-    href: '/services/strategy',
+    href: '/services',
   },
   {
     title: 'UX/UI Design',
     description:
       'Crafting intuitive, user-centric and beautiful digital experiences.',
     icon: 'layers',
-    href: '/services/ux-ui-design',
+    href: '/services',
   },
   {
     title: 'Engineering',
     description:
       'Building robust, scalable, and secure software architectures.',
     icon: 'code',
-    href: '/services/engineering',
+    href: '/services',
   },
   {
     title: 'MVP Development',
     description:
       'Launch faster with a powerful Minimum Viable Product designed to test hypotheses and gain traction quickly.',
     icon: 'rocket_launch',
-    href: '/services/mvp-development',
+    href: '/services',
   },
   {
     title: 'Dedicated Teams',
     description: 'Augment your team with our world-class engineering talent.',
     icon: 'groups',
-    href: '/services/dedicated-teams',
+    href: '/services',
   },
 ];
 
@@ -46,82 +46,82 @@ const detailspage = [
     description:
       'Charting the course from idea to market-fit with data-driven insights.',
     icon: 'explore',
-    href: '/services/strategy',
+    href: '/services',
   },
   {
     title: 'UX/UI Design',
     description:
       'Crafting intuitive, user-centric and beautiful digital experiences.',
     icon: 'layers',
-    href: '/services/ux-ui-design',
+    href: '/services',
   },
   {
     title: 'Engineering',
     description:
       'Building robust, scalable, and secure software architectures.',
     icon: 'code',
-    href: '/services/engineering',
+    href: '/services',
   },
   {
     title: 'Product Management',
     description:
       "From concept to launch, we guide your product's journey to success.",
     icon: 'assignment',
-    href: '/services/product-management',
+    href: '/services',
   },
   {
     title: 'DevOps',
     description:
       'Streamline your development and deployment with our DevOps expertise.',
     icon: 'engineering',
-    href: '/services/devops',
+    href: '/services',
   },
   {
     title: 'LLMOps',
     description:
       'Operationalize and scale your large language models with our LLMOps solutions.',
     icon: 'model_training',
-    href: '/services/llmops',
+    href: '/services',
   },
   {
     title: 'Data Analytics',
     description:
       'Turn your data into actionable insights with our data analytics services.',
     icon: 'analytics',
-    href: '/services/data-analytics',
+    href: '/services',
   },
   {
     title: 'Go-To-Market Strategy',
     description: 'We help you launch your product and achieve market traction.',
     icon: 'campaign',
-    href: '/services/go-to-market-strategy',
+    href: '/servicesy',
   },
   {
     title: 'Mobile App Development',
     description:
       'Engaging and high-performance mobile apps for iOS and Android.',
     icon: 'phone_iphone',
-    href: '/services/mobile-app-development',
+    href: '/services',
   },
   {
     title: 'Web Development',
     description:
       'Modern, scalable, and secure web applications tailored to your business needs.',
     icon: 'web',
-    href: '/services/web-development',
+    href: '/services',
   },
   {
     title: 'MVP Development',
     description:
       'Launch faster with a powerful Minimum Viable Product designed to test hypotheses and gain traction quickly.',
     icon: 'rocket_launch',
-    href: '/services/mvp-development',
+    href: '/services',
   },
   {
     title: 'Dedicated Teams',
     description: 'Augment your team with our world-class engineering talent.',
     icon: 'groups',
-    href: '/services/dedicated-teams',
+    href: '/services',
   },
 ];
 
@@ -243,7 +243,9 @@ export default function ServicesPage() {
             viewport={{ once: true, amount: 0.18 }}
           >
             {detailspage.map((service, index) => (
-              <Link href={service.href} key={index}>
+              <div 
+//              href={service.href} key={index}
+              >
                 <motion.a
                   variants={motionVariants.item}
                   whileHover="hover"
@@ -266,13 +268,13 @@ export default function ServicesPage() {
                   >
                     {service.description}
                   </p>
-                  <div className="absolute right-6 top-6 opacity-0 transform translate-x-[-10px] transition-all duration-150 group-hover:opacity-100 group-hover:translate-x-0">
+                  {/* <div className="absolute right-6 top-6 opacity-0 transform translate-x-[-10px] transition-all duration-150 group-hover:opacity-100 group-hover:translate-x-0">
                     <span className="material-symbols-outlined text-primary">
                       arrow_forward
                     </span>
-                  </div>
+                  </div> */}
                 </motion.a>
-              </Link>
+              </div>
             ))}
           </motion.div>
         </section>
