@@ -514,12 +514,12 @@ export default function Home() {
                       {
                         icon: 'inventory_2',
                         title: 'Product Management',
-                        desc: 'Strategic roadmappings',
+                        desc: 'Strategic Product Delivery',
                         color: 'text-amber-400',
                       },
                       {
                         icon: 'insights',
-                        title: 'Business Development<',
+                        title: 'Business Development',
                         desc: 'Market Expansion',
                         color: 'text-green-400',
                       },
